@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="auto">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title></title>
+<meta name="Generator" content="Cocoa HTML Writer">
+<style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px}
+p.p2 {margin: 10.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica; color: #000000}
+span.s1 {font-family: 'Helvetica'; font-weight: normal; font-style: normal; font-size: 12.00px}
+span.s2 {font-family: 'Helvetica'; font-weight: normal; font-style: normal; font-size: 14.00px}
+    @media print {
+        * {
+            -webkit-print-color-adjust: exact !important;
+        }
+    }
+
+    html * {
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    div.pagebreak { page-break-before: always; }
+
+    div.pageHeader {
+        font-weight: bold;
+        font-size: 12pt;
+        margin-bottom: 10pt;
+    }
+
+    div.title {
+        font-weight: bold;
+        font-size: 12pt;
+        margin: 0pt 6pt;
+    }
+
+    div.reflectionPrompt {
+        margin: auto;
+        margin-bottom: 10px;
+        padding: 12px;
+        border-radius: 4pt;
+        color: white;
+        font-weight: 600;
+        font-size: 10pt;
+    }
+    
+    div.reflectionType_1 {
+        background-color: #212438;
+    }
+
+    div.reflectionType_2 {
+        background-color: #DD5A58;
+    }
+
+    div.reflectionType_3 {
+        background-color: #DA8888;
+    }
+
+    div.reflectionType_4 {
+        background-color: #899CF7;
+    }
+
+    div.reflectionType_5 {
+        background-color: #736FAC;
+    }
+
+    div.reflectionType_6 {
+        background-color: #915072;
+    }
+
+    div.photoBanner {
+        font-weight: 600;
+        font-size: 10pt;
+        text-align: left;
+        margin: auto;
+        margin-bottom: 20px;
+        background-color: #5856d626;
+        padding: 10px;
+        border-radius: 4pt;
+    }
+
+    div.photoBanner img {
+        height: 25px;
+        vertical-align: middle;
+        padding-right: 5px;
+    }
+
+    div.container {
+        min-height: 100vh;
+        width: 80%;
+        margin: auto;
+    }
+
+    div.assetGrid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 4pt;
+        margin-bottom: 25pt;
+    }
+
+    div.gridItem {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        position: relative;
+        border-radius: 4pt;
+    }
+    
+    img.asset_image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 4pt;
+    }
+
+    .gridItem.fallback_asset {
+        background-color:#7676801F;
+    }
+    
+    .gridItem.fallback_asset .asset_image {
+        object-fit: contain;
+        margin-top: 30%;
+        height: 40%;
+    }
+
+    video.asset_video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 4pt;
+    }
+
+    .gridItemOverlayText {
+        color: #3C3C4299;
+    }
+
+    div.gridItemOverlayHeader {
+        position: absolute;
+        top: 4pt;
+        right: 4pt;
+        left: 4pt;
+        text-align: center;
+        border-radius: 3pt;
+        margin: auto;
+        font-weight: 600;
+        font-size: 8pt;
+    }
+
+    div.gridItemOverlayFooter {
+        position: absolute;
+        left: 4pt;
+        bottom: 4pt;
+        right: 4pt;
+        text-align: center;
+        border-radius: 3pt;
+        margin: auto;
+        font-weight: normal;
+        font-size: 8pt;
+    }
+
+    div.bodyText {
+        font-weight: normal;
+        font-size: 10pt;
+        margin: 0pt 6pt;
+    }
+
+    blockquote {
+        border-left: 3px solid #ccc;
+        padding: 0.2em 5px;
+    }
+
+    div.workoutWindowOverlay {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: -webkit-radial-gradient(transparent 60%, rgba(0, 0, 0, 0.8) 60%);
+    }
+
+    svg {
+        top: 0;
+        left: 0;
+        position: absolute;
+        border-radius: 3pt;
+    }
+
+    img.asset_workoutIcon {
+        background: black;
+    }
+
+    div.activityType {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        color: white;
+        text-align: center;
+        padding: 6pt;
+        margin: auto;
+        font-weight: 600;
+        font-size: 8pt;
+    }
+
+    div.activityMetrics {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        color: white;
+        text-align: center;
+        padding: 6pt;
+        margin: auto;
+        font-weight: 600;
+        font-size: 8pt;
+    }
+
+    span.activityMetricsDistance {
+        color: #6CB4EE;
+    }
+
+    span.activityMetricsCalories {
+        color: #E32636;
+    }
+
+    span.activityMetricsDuration {
+        color: #FFD700;
+    }
+
+    div.durationText {
+        position: absolute;
+        bottom: 4pt;
+        right: 6pt;
+        color: white;
+        font-weight: 600;
+        font-size: 8pt;
+        text-shadow: black 0px 0px 10px;
+    }
+
+    .audioAssetHeader {
+        margin: 4pt;
+        position: absolute;
+        height 22px;
+    }
+    
+    .audioDuration {
+        display: inline-block;
+        height: auto;
+        margin-left: 5pt;
+        font-weight: 600;
+        font-size: 8pt;
+        top: 4pt;
+    }
+    
+    .audioQuoteBubble {
+        width: 20px;
+        height: auto;
+        display: inline-block;
+        margin-left: 5pt;
+        top: 8pt;
+        position: absolute;
+    }
+    
+    .audioPlayButton {
+        top: 4pt;
+        height: 22pt;
+        position: relative;
+        display: inline-block;
+    }
+
+    .assetType_audio {
+        background: #899CF751;
+    }
+
+    .assetType_audio .asset_image {
+        object-fit: contain;
+        margin-top: 25%;
+        height: 70%;
+    }
+
+    .mediaTypeIcon {
+        height: 14px;
+        position: absolute;
+        background: #8E8E93;
+        border-radius: 2pt;
+        bottom: 4pt;
+        left: 4pt;
+        padding: 2pt;
+    }
+
+    .mediaPlayIcon {
+        height: 22pt;
+        position: absolute;
+        top: 4pt;
+    }
+
+    .assetType_multiPinMap .gridItemOverlayFooter {
+        background:#E5E5EA; padding:4pt;
+    }
+            
+    .assetType_stateOfMind .asset_image {
+        object-fit: contain;
+        margin-top: 25%;
+        height: 50%;
+    }
+
+    .assetType_workoutIcon.multiple_workouts .asset_image {
+        object-fit: contain;
+        margin-top: 15%;
+        height: 70%;
+    }
+
+    .assetType_workoutIcon {
+        background-color: black;
+    }
+
+    .assetType_thirdPartyMedia .asset_image {
+        height: 12pt;
+        width: 12pt;
+        bottom: 4pt;
+        left: 4pt;
+        position: absolute;
+        border-radius: 2pt;
+    }
+
+    .thirdPartyAssetOverlay {
+        margin: 8pt 8px 22pt 12pt;
+        font-size: 8pt;
+        font-weight: normal;
+        color: white;
+    }
+
+    .thirdPartyAssetOverlay .mediaTitle {
+        font-weight: 600;
+    }
+
+    .thirdPartyAssetOverlay .mediaCategory {
+        margin-top: 4pt;
+        color: #FFFFFF99;
+    }
+
+
+    .assetType_motionActivity .asset_image {
+        object-fit: contain;
+        margin-top: 25%;
+        height: 50%;
+    }
+
+    .assetType_contact {
+        background-color: #E5E5EA;
+    }
+
+    .assetType_contact .asset_image {
+        object-fit: contain;
+        margin-top: 10%;
+        height: 60%;
+    }
+
+    .assetType_contact .gridItemOverlayText {
+        color:#00000099;
+        font-weight: 600;
+    }
+
+    .assetType_motionActivity .activityType {
+        color:#00000099;
+    }
+
+    .assetType_motionActivity .activityMetrics {
+        color:#3C3C4366;
+    }
+
+    .assetType_motionActivity {
+        background-color:#FCE6E7;
+    }
+
+    audio {
+        position: absolute;
+        right: 4pt;
+        left: 4pt;
+        bottom: 4pt;
+        margin: auto;
+    }
+</style>
+</head>
+<body>
+<p class="p1"><span class="s1"><div class='pageContainer'>    <div class="pageHeader">Monday, February 3, 2025</div>    <div class="assetGrid">    <div id="6CF3067A-012E-498B-8EE1-C8E79DF2C2BE" class="gridItem assetType_music " >
+        <img src="../Resources/mediaPlayIcon.heic" class="mediaPlayIcon" />
+        <img src="../Resources/6CF3067A-012E-498B-8EE1-C8E79DF2C2BE.heic" class="asset_image"/>
+        <img src="../Resources/musicIcon.heic" class="mediaTypeIcon" />
+    </div>    <div id="1974855B-EAC9-4FA1-8DBB-C506A1C2FD1A" class="gridItem assetType_music " >
+        <img src="../Resources/mediaPlayIcon.heic" class="mediaPlayIcon" />
+        <img src="../Resources/1974855B-EAC9-4FA1-8DBB-C506A1C2FD1A.heic" class="asset_image"/>
+        <img src="../Resources/musicIcon.heic" class="mediaTypeIcon" />
+    </div>    <div id="A33C18B7-649A-4A51-890A-8DB5E6A6DA44" class="gridItem assetType_video " >
+        
+            <video class="asset_video" controls>
+      <source src="../Resources/66BEC43B-1D69-4D93-A95E-B7D3EC1B9D74.mov" type="video/mp4">
+      Your browser does not support the video tag.<no loc>
+    </video>
+        <div class="durationText">0:17</div>
+        
+    </div>    <div id="490BBA13-AD3E-46A4-AE70-658990EA9781" class="gridItem assetType_stateOfMind " style="background-color:#DCE8CD;">
+            <div class="gridItemOverlayText gridItemOverlayHeader" style="">Happy, Satisfied, and more</div>
+        <img src="../Resources/490BBA13-AD3E-46A4-AE70-658990EA9781.heic" class="asset_image"/>
+            <div class="gridItemOverlayText gridItemOverlayFooter" style="">Friends, Self-Care, and more</div>
+    </div>    <div id="F4840AA0-171D-4263-9521-F8728BA0E02E" class="gridItem assetType_multiPinMap " >
+        
+        <img src="../Resources/F4840AA0-171D-4263-9521-F8728BA0E02E.heic" class="asset_image"/>
+            <div class="gridItemOverlayFooter" style="background:#E5E5EA; padding:4pt;">Corus</div>
+    </div>    <div id="41A3D2C3-C711-42F8-B296-CD3DAFC4A871" class="gridItem assetType_livePhoto " >
+        
+        <img src="../Resources/41A3D2C3-C711-42F8-B296-CD3DAFC4A871.HEIC" class="asset_image"/>
+        
+    </div>    <div id="E5B084E7-6429-4C7F-8554-AB9C42DCE264" class="gridItem assetType_livePhoto " >
+        
+        <img src="../Resources/E5B084E7-6429-4C7F-8554-AB9C42DCE264.HEIC" class="asset_image"/>
+        
+    </div></div>    <div class="title">第一天写日记</div><div class='bodyText'></span></p>
+<p class="p2"><span class="s2">Hello 今天是我第一天开始写日记</span></p>
+<p class="p2"><span class="s2">今天是温哥华第二天下雪❄️ 终于迎来了今年的初雪</span></p>
+<p class="p2"><span class="s2">所以今天不用去学校上学哈哈哈 但是昨天晚上我睡的太晚了 今天差点没起来上课:)) 上完课又继续睡过去了 睡觉真的很爽啊！ 想一直睡 好幸福。</span></p>
+<p class="p2"><span class="s2">最近一直在听LÜCY的新专辑 最爱With all my heart 莫名上头</span></p>
+<p class="p2"><span class="s2">下午的时候房东来换了两个坏掉的灯泡！感恩！厕所终于又亮堂了起来</span></p>
+<p class="p2"><span class="s2">今天心情好像还不错 虽然大部分时间都在想着赶紧完成作业 可以开始复习 还是蛮有成就感的<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s2">今晚吃了叉烧还有可乐虾仁哈哈哈哈 洗完澡出去一看垃圾撒了一地 被迫清洁了！</span></p>
+<p class="p2"><span class="s2">扔完垃圾回来之后跟k在做PA 做着做着决定先把Lab做完明天再回来做PA（因为不会🌚😵） 我说我要在梦里学会<span class="Apple-converted-space">  </span>好吧不得不承认 一起工作的时候还是蛮开心的哈哈哈 不知不觉三个小时就这样过去了哈 有能力教会别人也是一种恩赐 我还蛮喜欢教别人的（前提是我不讨厌对方哈哈哈哈🫣<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s2">我们的关系好像有点升温（？？ 不知道是不是我的错觉 也可能就是朋友变得更熟了吧！🌝</span></p>
+<p class="p2"><span class="s2">hahahaha不管了 今天就这样吧 约定了明天早上起来工作呢 我要卷4️⃣你们🥸</span></p>
+<p class="p2"><span class="s2">晚安世界 晚安大家<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"></div></div></span></p>
+</body>
+</html>

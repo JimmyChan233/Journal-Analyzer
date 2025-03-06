@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Journal Analyzer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">AI Journal Analyzer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/upload">Upload</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h1 class="card-title">AI-Powered Journal Analysis Tool</h1>
+                    </div>
+                    <div class="card-body">
+                        <h2>Welcome to your Wellbeing Journal Analyzer</h2>
+                        <p class="lead">
+                            This tool helps you analyze your journal entries to gain insights into your wellbeing across multiple dimensions.
+                        </p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header bg-success text-white">
+                                        <h3 class="card-title">Features</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Sentiment Analysis: Track your emotional patterns over time</li>
+                                            <li>Self-Care Dimensions: See how your journal entries reflect different aspects of wellbeing</li>
+                                            <li>Word Frequency Analysis: Identify common themes in your journaling</li>
+                                            <li>Trend Analysis: Discover correlations between different wellbeing dimensions</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header bg-info text-white">
+                                        <h3 class="card-title">Get Started</h3>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <p>Upload your journal PDFs to begin analyzing your wellbeing journey.</p>
+                                        <a href="/upload" class="btn btn-primary btn-lg">Upload Journal Entries</a>
+                                        <hr>
+                                        <p>Or view your existing analyses:</p>
+                                        <a href="/dashboard" class="btn btn-success btn-lg">View Dashboard</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mt-4">
+                            <div class="card-header bg-warning">
+                                <h3 class="card-title">How It Works</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3 text-center mb-3">
+                                        <div class="feature-icon">
+                                            <span class="h1">📝</span>
+                                        </div>
+                                        <h4>Upload</h4>
+                                        <p>Upload your Chinese-language journal PDFs</p>
+                                    </div>
+                                    <div class="col-md-3 text-center mb-3">
+                                        <div class="feature-icon">
+                                            <span class="h1">🔍</span>
+                                        </div>
+                                        <h4>Analyze</h4>
+                                        <p>AI processes your journal entries</p>
+                                    </div>
+                                    <div class="col-md-3 text-center mb-3">
+                                        <div class="feature-icon">
+                                            <span class="h1">📊</span>
+                                        </div>
+                                        <h4>Visualize</h4>
+                                        <p>View insights through interactive charts</p>
+                                    </div>
+                                    <div class="col-md-3 text-center mb-3">
+                                        <div class="feature-icon">
+                                            <span class="h1">🧠</span>
+                                        </div>
+                                        <h4>Reflect</h4>
+                                        <p>Gain self-awareness and track progress</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5 py-3 bg-light text-center">
+        <div class="container">
+            <p>AI Journal Analyzer &copy; 2025</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

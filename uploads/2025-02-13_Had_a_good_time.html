@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="auto">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title></title>
+<meta name="Generator" content="Cocoa HTML Writer">
+<style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px}
+p.p2 {margin: 10.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica; color: #000000}
+span.s1 {font-family: 'Helvetica'; font-weight: normal; font-style: normal; font-size: 12.00px}
+span.s2 {font-family: 'Helvetica'; font-weight: normal; font-style: normal; font-size: 14.00px}
+    @media print {
+        * {
+            -webkit-print-color-adjust: exact !important;
+        }
+    }
+
+    html * {
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    div.pagebreak { page-break-before: always; }
+
+    div.pageHeader {
+        font-weight: bold;
+        font-size: 12pt;
+        margin-bottom: 10pt;
+    }
+
+    div.title {
+        font-weight: bold;
+        font-size: 12pt;
+        margin: 0pt 6pt;
+    }
+
+    div.reflectionPrompt {
+        margin: auto;
+        margin-bottom: 10px;
+        padding: 12px;
+        border-radius: 4pt;
+        color: white;
+        font-weight: 600;
+        font-size: 10pt;
+    }
+    
+    div.reflectionType_1 {
+        background-color: #212438;
+    }
+
+    div.reflectionType_2 {
+        background-color: #DD5A58;
+    }
+
+    div.reflectionType_3 {
+        background-color: #DA8888;
+    }
+
+    div.reflectionType_4 {
+        background-color: #899CF7;
+    }
+
+    div.reflectionType_5 {
+        background-color: #736FAC;
+    }
+
+    div.reflectionType_6 {
+        background-color: #915072;
+    }
+
+    div.photoBanner {
+        font-weight: 600;
+        font-size: 10pt;
+        text-align: left;
+        margin: auto;
+        margin-bottom: 20px;
+        background-color: #5856d626;
+        padding: 10px;
+        border-radius: 4pt;
+    }
+
+    div.photoBanner img {
+        height: 25px;
+        vertical-align: middle;
+        padding-right: 5px;
+    }
+
+    div.container {
+        min-height: 100vh;
+        width: 80%;
+        margin: auto;
+    }
+
+    div.assetGrid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 4pt;
+        margin-bottom: 25pt;
+    }
+
+    div.gridItem {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        position: relative;
+        border-radius: 4pt;
+    }
+    
+    img.asset_image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 4pt;
+    }
+
+    .gridItem.fallback_asset {
+        background-color:#7676801F;
+    }
+    
+    .gridItem.fallback_asset .asset_image {
+        object-fit: contain;
+        margin-top: 30%;
+        height: 40%;
+    }
+
+    video.asset_video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 4pt;
+    }
+
+    .gridItemOverlayText {
+        color: #3C3C4299;
+    }
+
+    div.gridItemOverlayHeader {
+        position: absolute;
+        top: 4pt;
+        right: 4pt;
+        left: 4pt;
+        text-align: center;
+        border-radius: 3pt;
+        margin: auto;
+        font-weight: 600;
+        font-size: 8pt;
+    }
+
+    div.gridItemOverlayFooter {
+        position: absolute;
+        left: 4pt;
+        bottom: 4pt;
+        right: 4pt;
+        text-align: center;
+        border-radius: 3pt;
+        margin: auto;
+        font-weight: normal;
+        font-size: 8pt;
+    }
+
+    div.bodyText {
+        font-weight: normal;
+        font-size: 10pt;
+        margin: 0pt 6pt;
+    }
+
+    blockquote {
+        border-left: 3px solid #ccc;
+        padding: 0.2em 5px;
+    }
+
+    div.workoutWindowOverlay {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: -webkit-radial-gradient(transparent 60%, rgba(0, 0, 0, 0.8) 60%);
+    }
+
+    svg {
+        top: 0;
+        left: 0;
+        position: absolute;
+        border-radius: 3pt;
+    }
+
+    img.asset_workoutIcon {
+        background: black;
+    }
+
+    div.activityType {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        color: white;
+        text-align: center;
+        padding: 6pt;
+        margin: auto;
+        font-weight: 600;
+        font-size: 8pt;
+    }
+
+    div.activityMetrics {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        color: white;
+        text-align: center;
+        padding: 6pt;
+        margin: auto;
+        font-weight: 600;
+        font-size: 8pt;
+    }
+
+    span.activityMetricsDistance {
+        color: #6CB4EE;
+    }
+
+    span.activityMetricsCalories {
+        color: #E32636;
+    }
+
+    span.activityMetricsDuration {
+        color: #FFD700;
+    }
+
+    div.durationText {
+        position: absolute;
+        bottom: 4pt;
+        right: 6pt;
+        color: white;
+        font-weight: 600;
+        font-size: 8pt;
+        text-shadow: black 0px 0px 10px;
+    }
+
+    .audioAssetHeader {
+        margin: 4pt;
+        position: absolute;
+        height 22px;
+    }
+    
+    .audioDuration {
+        display: inline-block;
+        height: auto;
+        margin-left: 5pt;
+        font-weight: 600;
+        font-size: 8pt;
+        top: 4pt;
+    }
+    
+    .audioQuoteBubble {
+        width: 20px;
+        height: auto;
+        display: inline-block;
+        margin-left: 5pt;
+        top: 8pt;
+        position: absolute;
+    }
+    
+    .audioPlayButton {
+        top: 4pt;
+        height: 22pt;
+        position: relative;
+        display: inline-block;
+    }
+
+    .assetType_audio {
+        background: #899CF751;
+    }
+
+    .assetType_audio .asset_image {
+        object-fit: contain;
+        margin-top: 25%;
+        height: 70%;
+    }
+
+    .mediaTypeIcon {
+        height: 14px;
+        position: absolute;
+        background: #8E8E93;
+        border-radius: 2pt;
+        bottom: 4pt;
+        left: 4pt;
+        padding: 2pt;
+    }
+
+    .mediaPlayIcon {
+        height: 22pt;
+        position: absolute;
+        top: 4pt;
+    }
+
+    .assetType_multiPinMap .gridItemOverlayFooter {
+        background:#E5E5EA; padding:4pt;
+    }
+            
+    .assetType_stateOfMind .asset_image {
+        object-fit: contain;
+        margin-top: 25%;
+        height: 50%;
+    }
+
+    .assetType_workoutIcon.multiple_workouts .asset_image {
+        object-fit: contain;
+        margin-top: 15%;
+        height: 70%;
+    }
+
+    .assetType_workoutIcon {
+        background-color: black;
+    }
+
+    .assetType_thirdPartyMedia .asset_image {
+        height: 12pt;
+        width: 12pt;
+        bottom: 4pt;
+        left: 4pt;
+        position: absolute;
+        border-radius: 2pt;
+    }
+
+    .thirdPartyAssetOverlay {
+        margin: 8pt 8px 22pt 12pt;
+        font-size: 8pt;
+        font-weight: normal;
+        color: white;
+    }
+
+    .thirdPartyAssetOverlay .mediaTitle {
+        font-weight: 600;
+    }
+
+    .thirdPartyAssetOverlay .mediaCategory {
+        margin-top: 4pt;
+        color: #FFFFFF99;
+    }
+
+
+    .assetType_motionActivity .asset_image {
+        object-fit: contain;
+        margin-top: 25%;
+        height: 50%;
+    }
+
+    .assetType_contact {
+        background-color: #E5E5EA;
+    }
+
+    .assetType_contact .asset_image {
+        object-fit: contain;
+        margin-top: 10%;
+        height: 60%;
+    }
+
+    .assetType_contact .gridItemOverlayText {
+        color:#00000099;
+        font-weight: 600;
+    }
+
+    .assetType_motionActivity .activityType {
+        color:#00000099;
+    }
+
+    .assetType_motionActivity .activityMetrics {
+        color:#3C3C4366;
+    }
+
+    .assetType_motionActivity {
+        background-color:#FCE6E7;
+    }
+
+    audio {
+        position: absolute;
+        right: 4pt;
+        left: 4pt;
+        bottom: 4pt;
+        margin: auto;
+    }
+</style>
+</head>
+<body>
+<p class="p1"><span class="s1"><div class='pageContainer'>    <div class="pageHeader">Wednesday, February 12, 2025</div>    <div class="assetGrid">    <div id="F36541F3-9B5F-4F82-8660-29CAB5CB04BE" class="gridItem assetType_workoutRoute " >
+            <svg viewbox="0 0 100 100" width="100%" height="100%" preserveAspectRatio="none">
+      <defs>
+        <mask id="mask" x="0" y="0" width="100%" height="100%">
+          <rect x="0" y="0" width="100%" height="100%" fill="#fff"/>
+          <circle cx="50" cy="50" r="30" />
+        </mask>
+      </defs>
+      <rect x="0" y="0" width="100%" height="100%" mask="url(#mask)" fill-opacity="0.7"/>
+    </svg>    <div class="activityType">Outdoor Walk</div>
+        <img src="../Resources/F36541F3-9B5F-4F82-8660-29CAB5CB04BE.heic" class="asset_image"/>
+            <div class="activityMetrics"><span class="activityMetricsDistance">1.48KM</span> · <span class="activityMetricsDuration">0:24:16</span></div>
+    </div>    <div id="C3E59076-F31D-47BE-A48C-D3B3310A7F70" class="gridItem assetType_livePhoto " >
+        
+        <img src="../Resources/C3E59076-F31D-47BE-A48C-D3B3310A7F70.HEIC" class="asset_image"/>
+        
+    </div>    <div id="5CDAB82D-55C2-40DC-8251-46F9133599C3" class="gridItem assetType_livePhoto " >
+        
+        <img src="../Resources/5CDAB82D-55C2-40DC-8251-46F9133599C3.HEIC" class="asset_image"/>
+        
+    </div>    <div id="2843344B-AECC-4D9F-A155-4A1BAEBA2558" class="gridItem assetType_photo " >
+        
+        <img src="../Resources/2843344B-AECC-4D9F-A155-4A1BAEBA2558.jpeg" class="asset_image"/>
+        
+    </div>    <div id="62BF2C47-D797-4B68-A34A-0611FCC6E0CC" class="gridItem assetType_livePhoto " >
+        
+        <img src="../Resources/62BF2C47-D797-4B68-A34A-0611FCC6E0CC.HEIC" class="asset_image"/>
+        
+    </div>    <div id="55593D34-25B6-4E06-86B1-9FEEC1973396" class="gridItem assetType_livePhoto " >
+        
+        <img src="../Resources/55593D34-25B6-4E06-86B1-9FEEC1973396.HEIC" class="asset_image"/>
+        
+    </div>    <div id="56B505E7-DD0F-466B-9EDF-880AAE323301" class="gridItem assetType_photo " >
+        
+        <img src="../Resources/56B505E7-DD0F-466B-9EDF-880AAE323301.jpeg" class="asset_image"/>
+        
+    </div>    <div id="2906A0B7-BDE0-4FF7-B48B-B6996CD52989" class="gridItem assetType_photo " >
+        
+        <img src="../Resources/2906A0B7-BDE0-4FF7-B48B-B6996CD52989.png" class="asset_image"/>
+        
+    </div>    <div id="8880176B-3EFD-4EE6-BDB1-CDDD907AEED5" class="gridItem assetType_stateOfMind " style="background-color:#D7E9B3;">
+            <div class="gridItemOverlayText gridItemOverlayHeader" style="">Proud, Happy, and more</div>
+        <img src="../Resources/8880176B-3EFD-4EE6-BDB1-CDDD907AEED5.heic" class="asset_image"/>
+            <div class="gridItemOverlayText gridItemOverlayFooter" style="">Friends, Education, and more</div>
+    </div>    <div id="4FBE98B5-8553-4FCC-95BF-19DE59C8CF2B" class="gridItem assetType_multiPinMap " >
+        
+        <img src="../Resources/4FBE98B5-8553-4FCC-95BF-19DE59C8CF2B.heic" class="asset_image"/>
+            <div class="gridItemOverlayFooter" style="background:#E5E5EA; padding:4pt;">Forest Sciences Centre</div>
+    </div></div>    <div class="title">Had a good time</div><div class='bodyText'></span></p>
+<p class="p2"><span class="s2">今天睡够了 闹钟没响就已经自然醒了 赖了会床然后点了个A&amp;W当brunch （没错又是AW 不知道为什么想喝rootbeer。 吃了之后就开始最后复习数学 哎呀然后就真的不太复习的进去 然后很早 12点20？ 就走过去math了 哎哟一路上k突然问了很多关于ode神奇的问题 平时做也不会想那么多呀 怎么考试前开始乱想<span class="Apple-converted-space">  </span>到了之后就等到时间 就进去考试了<span class="Apple-converted-space">  </span>天呢这个数学midterm 虚惊一场 第一题一打开我就不会做 没想到可以factor 然后就跳过了开始做后面的 后面倒是挺顺畅的 然后最后一题卡了一下那个solution有点不确定那个形式哈哈哈 做完回到第一题然后又想到怎么做了！不错 不错😌 后面考完了就出去 然后k和kathryne在聊考试 后面她走了我就继续说 然后越说越奇怪 她发现自己好像做错了 赖我为什么要对答案哈哈哈哈 我就说是你先开始的嘛 好像还被 揍了一拳在我的手臂上<span class="Apple-converted-space">  </span>然后去Starbucks买了杯喝的买了个吃的就去esc继续复习了 今天带了宝丽来<span class="Apple-converted-space">  </span>然后就开始给她看我的polaroid 然后让她帮我拍了一张 真不错呀拍的我 很满意👍🏻 她有镜头恐惧不让我拍她 我就偷偷的趁她不注意 然后 抬头的时候拍了一张哈哈哈哈 居然 没有生气没有骂我<span class="Apple-converted-space">  </span>没想到！ 哎呀就是 拍的 没有太好 我不满意 不行我要拍的好看一点😶‍🌫️。 然后就是复习做题做ww然后互相教 怎么能做到我会的她不会 她不会的我会呢 教的过程我也更理解了 真的很棒！ 然后呢差不多我们就去准备考试了<span class="Apple-converted-space">  </span>elec 我很顺利的 26分钟做完了 💯 但是很不幸的是 k的hp prime好像出了什么问题 在她solve的时候就是一直闪退 然后最后好几个TA轮流过来 然后十几分钟就这样浪费了 吗呀真的很崩溃看着 然后最后她最后一题几个问也不够时间写完<span class="Apple-converted-space">  </span>很可惜。 然后她当然就很不甘嘛！ 真想抱抱她安慰一下<span class="Apple-converted-space">  </span>然后就教她做 陪她做完team part 至少最后也有83% 也没差太多啦。 后面还帮了一个那个印度的女生 不错。 然后就回家啦走路 走到看到ikb那里 觉得好看拍了张照 然后我说让她拿胶片帮我拍一张哈哈哈 然后拍下了 等一个返图😶‍🌫️。 气死我了Louis又要睡觉然后煮不了饭 他的作息真的很奇怪。 然后就自己煮了汤圆饺子丸子大杂烩当晚饭 也不错！ 吃完饭就跟妈妈视频了一会 聊天聊了一些 劳动节回去说可以去湖北自驾游哈哈哈 爽 然后有的没的 然后就打给爸爸 聊了一个多小时 不知道要不要读研呢。 又说到七月底可以去西藏那边 跟东东他们家搞公益什么的去体验十来天 也是一个不错的机会！ 然后还聊了很多有的没的 结束之后就去洗澡了 洗完澡出来把nurs作业简单写了一遍 结束这一天<span class="Apple-converted-space">  </span>哦！ 还定了应该5.24-30 去小韩🫣 芜湖<span class="Apple-converted-space">  </span>希望可以一切顺利 晚安！</span></p>
+<p class="p1"><span class="s1"></div></div></span></p>
+</body>
+</html>
