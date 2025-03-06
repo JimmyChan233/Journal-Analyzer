@@ -1,0 +1,23 @@
+journal_analyzer/
+│
+├── app.py               # Main Flask application
+├── config.py            # Configuration settings
+├── requirements.txt     # Project dependencies
+│
+├── static/              # Static files
+│   ├── css/             # CSS files
+│   │   └── styles.css   # Custom styles
+│   └── js/              # JavaScript files
+│       └── dashboard.js # Dashboard interactivity 
+│
+├── templates/           # HTML templates
+│   ├── index.html       # Main page
+│   ├── dashboard.html   # Analysis dashboard
+│   └── upload.html      # File upload form
+│
+├── utils/               # Utility modules
+│   ├── __init__.py      
+│   ├── pdf_extractor.py # PDF text extraction
+│   ├── nlp_processor.py # NLP processing
+│   ├── sentiment.py     # Sentiment analysis
+│   └── visualizer.py    # Data visualization
