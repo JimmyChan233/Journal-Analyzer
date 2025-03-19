@@ -271,21 +271,6 @@ To enable these features:
 - Integration with journaling apps
 - Advanced correlation analysis
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-### Development Setup
-1. Fork the repository
-2. Create a feature branch: `git checkout -b new-feature`
-3. Commit your changes: `git commit -am 'Add new feature'`
-4. Push to the branch: `git push origin new-feature`
-5. Submit a pull request
-
-### Coding Standards
-- Follow PEP 8 guidelines
-- Add docstrings to all functions
-- Include unit tests for new features
 
 ## License
 
