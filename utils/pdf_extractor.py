@@ -74,33 +74,38 @@ import requests
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-def extract_text_from_file(file_path):
-    """
-    Extract text from a file (PDF, TXT, or HTML).
-    
-    Args:
-        file_path (str): Path to the file
-        
-    Returns:
-        str: Extracted text from the file
-    """
-    if not os.path.exists(file_path):
-        logger.error(f"File not found: {file_path}")
-        return ""
-    
-    # Check file extension
-    _, ext = os.path.splitext(file_path)
-    ext = ext.lower()
-    
-    if ext == '.pdf':
-        return extract_text_from_pdf(file_path)
-    elif ext == '.txt':
-        return extract_text_from_txt(file_path)
+import os
+import re
+from bs4 import BeautifulSoup
+
+def extract_text_from_file(filepath):
+    ext = os.path.splitext(filepath)[1].lower()
+    if ext in ['.pdf', '.txt']:
+        # Your existing logic for PDFs and TXT files
+        return extract_text_from_non_html(filepath)
     elif ext in ['.html', '.htm']:
-        return extract_text_from_html(file_path)
-    else:
-        logger.error(f"Unsupported file type: {ext}")
-        return ""
+        with open(filepath, encoding='utf-8') as f:
+            soup = BeautifulSoup(f, 'html.parser')
+            # Remove common distraction elements
+            for tag in soup(['script', 'style', 'header', 'footer', 'nav', 'aside']):
+                tag.decompose()
+            # If your journal entries are wrapped in a specific container (for example, an <article> tag or a <div> with a specific class), extract that:
+            main_content = soup.find('article')
+            if not main_content:
+                # Optionally, if your sample HTML journal entry is structured with a custom container, use that:
+                main_content = soup.find('div', class_='journal-entry')
+            # Fallback to the <body> tag if no specific container is found
+            if not main_content:
+                main_content = soup.body
+            # Extract text and clean extra whitespace
+            if main_content:
+                text = main_content.get_text(separator='\n')
+            else:
+                text = soup.get_text(separator='\n')
+            text = re.sub(r'\n+', '\n', text).strip()
+            return text
+    return ""
+
 
 def extract_text_from_pdf(pdf_path):
     """

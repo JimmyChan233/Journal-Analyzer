@@ -388,7 +388,15 @@
                                                 </h2>
                                                 <div id="collapse{{ dimension }}" class="accordion-collapse collapse" data-bs-parent="#dimensionsAccordion">
                                                     <div class="accordion-body">
-                                                        <div id="{{ dimension }}Details"></div>
+                                                        <div id="collapse{{ dimension }}" class="accordion-collapse collapse" data-bs-parent="#dimensionsAccordion">
+                                                            <div class="accordion-body">
+                                                                {% if analysis.dimension_details and analysis.dimension_details[dimension] %}
+                                                                    <p>{{ analysis.dimension_details[dimension] }}</p>
+                                                                {% else %}
+                                                                    <p>No detailed analysis available.</p>
+                                                                {% endif %}
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

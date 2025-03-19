@@ -22,8 +22,10 @@ from utils.visualizer import (
     generate_word_cloud,
     generate_sentiment_chart,
     generate_dimension_chart,
-    generate_trend_analysis
+    generate_trend_analysis,
+    generate_dimension_details_api  # Add this line
 )
+
 
 # Import configuration
 from config import Config
@@ -31,8 +33,8 @@ from config import Config
 app = Flask(__name__)
 app.config.from_object(Config)
 
-# Increase max content length (100 MB)
-app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024
+# Increase max content length (200 MB)
+app.config['MAX_CONTENT_LENGTH'] = 200 * 1024 * 1024
 
 # Ensure upload directory exists
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
@@ -211,12 +213,12 @@ def process_files(file_paths):
                 else:
                     all_english_keywords[word] = count
             
-            # Create entry without individual word clouds for now
+            # Create entry with preview, sentiment, dimensions, etc.
             entry = {
                 'date': entry_date,
                 'filepath': filepath,
                 'filename': filename,
-                'text': entry_text[:200] + '...' if len(entry_text) > 200 else entry_text,  # Preview
+                'text': entry_text[:200] + '...' if len(entry_text) > 200 else entry_text,
                 'sentiment': sentiment,
                 'dimensions': processed_text['dimensions'],
                 'word_frequency': processed_text['word_frequency'][:20],  # Top 20 words
@@ -227,11 +229,8 @@ def process_files(file_paths):
             
             # Update overall stats
             results['overall']['sentiment'][sentiment['dominant']] += 1
-            
             for dim, score in processed_text['dimensions'].items():
                 results['overall']['dimensions'][dim] += score
-            
-            # Combine word frequencies
             for word, count in processed_text['word_frequency']:
                 if word in results['overall']['word_frequency']:
                     results['overall']['word_frequency'][word] += count
@@ -241,30 +240,26 @@ def process_files(file_paths):
     # Sort entries by date
     results['entries'].sort(key=lambda x: x['date'])
     
-    # Now generate summary word clouds for all entries
+    # Generate summary word clouds if keywords exist
     if all_chinese_keywords:
-        # Combine duplicate words in Chinese keywords
         chinese_word_dict = {}
         for word, count in all_chinese_keywords:
-            if word in chinese_word_dict:
-                chinese_word_dict[word] += count
-            else:
-                chinese_word_dict[word] = count
+            chinese_word_dict[word] = chinese_word_dict.get(word, 0) + count
         
-        # Generate summary word clouds
         summary_chinese_cloud = generate_word_cloud(chinese_word_dict, "summary_chinese")
         summary_english_cloud = generate_word_cloud(all_english_keywords, "summary_english", is_english=True)
         
-        # Add the summary word clouds to the results
         results['summary_word_clouds'] = {
             'chinese': summary_chinese_cloud,
             'english': summary_english_cloud
         }
         
-        # Also add the summary word clouds to each entry for display consistency
         for entry in results['entries']:
             entry['word_cloud_path'] = summary_english_cloud
             entry['chinese_word_cloud_path'] = summary_chinese_cloud
+    
+    # Generate dimension details using AI
+    results['dimension_details'] = generate_dimension_details_api(results['entries'])
     
     # Generate overall visualizations
     results['visualizations'] = {
@@ -285,18 +280,7 @@ def process_files(file_paths):
         }
     
     return results
-    
-    # Sort entries by date
-    results['entries'].sort(key=lambda x: x['date'])
-    
-    # Generate overall visualizations
-    results['visualizations'] = {
-        'sentiment_chart': generate_sentiment_chart(results['entries']),
-        'dimension_chart': generate_dimension_chart(results['entries']),
-        'trend_analysis': generate_trend_analysis(results['entries'])
-    }
-    
-    return results
+
 
 def extract_date_from_filename(filename):
     """Extract date from filename or return current date."""
