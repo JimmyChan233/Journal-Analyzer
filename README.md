@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/Python-3.8%2B-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-An advanced tool for analyzing Chinese journal entries, providing insights into wellbeing dimensions, emotional patterns, and generating visualizations with AI-powered analysis. This application helps users gain deeper understanding of their journaling practice through natural language processing and machine learning.
+An advanced tool for analyzing Chinese/English journal entries, providing insights into wellbeing dimensions, emotional patterns, and generating visualizations with AI-powered analysis. This application helps users gain deeper understanding of their journaling practice through natural language processing and machine learning.
 
 ## Features
 
