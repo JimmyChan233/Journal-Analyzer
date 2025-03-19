@@ -47,8 +47,8 @@ An advanced tool for analyzing Chinese/English journal entries, providing insigh
 
 ### Step 1: Clone the repository
 ```bash
-git clone https://github.com/yourusername/journal-analyzer.git
-cd journal-analyzer
+git clone https://github.com/JimmyChan233/Journal-Analyzer.git
+cd Journal-Analyzer
 ```
 
 ### Step 2: Create a virtual environment
@@ -108,7 +108,7 @@ Access the application at: http://127.0.0.1:5000
 3. Supported formats:
    - Single-entry files (one journal per file)
    - Multi-entry files (entries separated by dates like "Monday, February 3, 2025")
-   - HTML files named like "2025-02-03_第一天写日记.html"
+   - HTML files named like "2025-02-03_first_day_of_journaling.html"
 
 ### Viewing Analysis
 1. After uploading, you'll be redirected to the dashboard
