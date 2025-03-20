@@ -7,7 +7,7 @@
 An advanced tool for analyzing Chinese/English journal entries, providing insights into wellbeing dimensions, emotional patterns, and generating visualizations with AI-powered analysis. This application helps users gain deeper understanding of their journaling practice through natural language processing and machine learning.
 
 ## Demo Video
-[![Watch the video](https://img.youtube.com/vi/jrvTWMO9RxQ/0.jpg)](https://youtu.be/jrvTWMO9RxQ)
+[![Watch the video](https://img.youtube.com/vi/jrvTWMO9RxQ/1.jpg)](https://youtu.be/jrvTWMO9RxQ)
 
 
 ## Features
