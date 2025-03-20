@@ -329,8 +329,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - OpenAI for advanced language processing
 - Tesseract for OCR capabilities
 - Flask team for the web framework
-- All contributors and supporters of the project
-
 ---
 
 For questions or support, please open an issue on the repository.
