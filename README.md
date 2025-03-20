@@ -12,13 +12,17 @@ An advanced tool for analyzing Chinese/English journal entries, providing insigh
 ## 📖 Pages Description
 
 ### 🏠 Home Page  
+<img width="1376" alt="Screenshot 2025-03-19 at 5 45 03 PM" src="https://github.com/user-attachments/assets/046d480d-9c92-433a-bb1b-ae5f3420c6a2" />
+
 - **Purpose:** Landing page for the AI-enhanced journaling tool.
 - **Features:**  
   - Introduction and welcoming message.
   - Brief explanation of the app's purpose and key benefits.
   - Navigation to the Upload and Dashboard pages.
 
-### 📤 Upload Page  
+### 📤 Upload Page 
+<img width="1360" alt="Screenshot 2025-03-19 at 5 45 19 PM" src="https://github.com/user-attachments/assets/1b5ae050-7dd2-4a12-b2e5-74dd3ca3701f" />
+
 - **Purpose:** Enables users to upload their daily journal entries.
 - **Features:**  
   - PDF file upload functionality.
@@ -26,6 +30,8 @@ An advanced tool for analyzing Chinese/English journal entries, providing insigh
   - Integration with AI algorithms to process and analyze entries.
 
 ### 📊 Dashboard Page  
+<img width="1354" alt="Screenshot 2025-03-19 at 5 46 07 PM" src="https://github.com/user-attachments/assets/35cba6f4-03ec-46e9-a29c-fc87100df79e" />
+
 - **Purpose:** Displays detailed analytics and insights derived from uploaded journal entries.
 - **Features:**  
   
