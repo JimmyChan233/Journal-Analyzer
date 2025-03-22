@@ -1,3 +1,5 @@
+#pdf_extractor.py
+
 def extract_text_from_html(html_path):
     """
     Extract text from an HTML file.

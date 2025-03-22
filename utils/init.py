@@ -1,3 +1,4 @@
+#init.py
 """
 Utils package for Journal Analyzer.
 
@@ -47,3 +48,4 @@ __all__ = [
     'generate_dimension_chart',
     'generate_trend_analysis'
 ]
+
