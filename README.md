@@ -328,7 +328,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Jieba for Chinese word segmentation
 - OpenAI for advanced language processing
 - Tesseract for OCR capabilities
-- Flask team for the web framework
 ---
 
 For questions or support, please open an issue on the repository.
